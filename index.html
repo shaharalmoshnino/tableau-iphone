@@ -1,53 +1,47 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>נתוני מכירות האייפון 📱</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>דשבורד מכירות אייפון</title>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Heebo', sans-serif;
-      background: linear-gradient(to bottom, #fff0f5, #ffe6f0);
       margin: 0;
       padding: 0;
       direction: rtl;
+      background: linear-gradient(to bottom, #fff0f5, #ffe6f0);
+      color: #333;
     }
     header {
       background-color: #ffb6c1;
-      padding: 1rem;
-      text-align: center;
       color: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     h1 {
       margin: 0;
       font-size: 2rem;
     }
-    section {
-      padding: 2rem;
+    .content {
       text-align: center;
+      padding: 2rem;
     }
-    .subheading {
-      font-size: 1.5rem;
-      color: #d63384;
-      margin-bottom: 1rem;
-    }
-    .tableauPlaceholder {
-      width: 80%;
-      margin: auto;
-      animation: fadeIn 2s ease-in-out;
-      min-height: 520px;
-    }
-    .iphone-emoji {
+    .emoji {
       font-size: 2rem;
       animation: bounce 2s infinite;
-      display: inline-block;
-      margin: 0 0.25rem;
     }
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-8px); }
+    }
+    .tableauPlaceholder {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      min-height: 600px;
     }
     footer {
       background-color: #ffe4ec;
@@ -59,19 +53,20 @@
 </head>
 <body>
   <header>
-    <h1>⭐ ניתוח נתוני מכירות האייפון ⭐</h1>
-    <div>📱📱📱</div>
+    <h1>📱 ניתוח נתוני מכירות אייפון</h1>
   </header>
 
-  <section>
-    <div class="subheading">📊 דשבורד אינטראקטיבי מתוך Tableau</div>
-    <p>צפו בנתוני מכירות, השוואות בין דגמים ומגמות משתנות לאורך השנים.</p>
+  <div class="content">
+    <p class="emoji">📊📈✨</p>
+    <p>הדשבורד האינטראקטיבי שלנו מתוך Tableau:</p>
 
-    <!-- Tableau Embed Code -->
-    <div class='tableauPlaceholder' id='viz1689505612310' style='position: relative'>
-      <noscript><a href='#'>
-        <img alt='Dashboard1' src='https://public.tableau.com/static/images/wo/workbook1_17433577760690/Dashboard1/1_rss.png' style='border: none' />
-      </a></noscript>
+    <!-- הטמעת דשבורד -->
+    <div class='tableauPlaceholder' id='viz171182154'>
+      <noscript>
+        <a href='https://public.tableau.com/views/workbook1_17433577760690/Dashboard1'>
+          <img alt='Dashboard1' src='https://public.tableau.com/static/images/wo/workbook1_17433577760690/Dashboard1/1_rss.png' style='border: none' />
+        </a>
+      </noscript>
       <object class='tableauViz' style='display:none;'>
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
         <param name='embed_code_version' value='3' />
@@ -82,3 +77,8 @@
         <param name='display_static_image' value='yes' />
         <param name='display_spinner' value='yes' />
         <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='he-IL' />
+      </object>
+    </div>
+  </
