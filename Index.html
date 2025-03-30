@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ניתוח נתוני מכירות האייפון מ-Tableau</title>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Heebo', sans-serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    header {
+      background-color: #ffb6c1;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    section {
+      padding: 2rem;
+    }
+    .subheading {
+      font-size: 1.5rem;
+      color: #d63384;
+      margin-bottom: 1rem;
+    }
+    .tableau-container {
+      text-align: center;
+      margin-top: 2rem;
+      animation: fadeIn 2s ease-in-out;
+      position: relative;
+    }
+    iframe {
+      border: 2px solid #ff69b4;
+      border-radius: 12px;
+      width: 80%;
+      height: 500px;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .iphone-emoji {
+      font-size: 2rem;
+      animation: bounce 2s infinite;
+      display: inline-block;
+      margin: 0 0.25rem;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #ff69b4;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin: 2rem auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    footer {
+      background-color: #ffe4ec;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>⭐ אתר ניתוח נתוני מכירות האייפון Tableau ⭐</h1>
+    <div>📱📱📱</div>
+  </header>
+
+  <section>
+    <div class="subheading">הדשבורד שיצרנו של הנתונים ⬇️</div>
+    <p>הנתונים הבאים מראים כל מה שתרצו לדעת בנוגע לדגמי האייפון השונים!</p>
+
+    <div class="tableau-container">
+      <div id="loader" class="loader"></div>
+      <!-- Tableau Embed -->
+      <iframe id="tableauFrame" src="https://public.tableau.com/views/workbook1_17433577760690/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" allowfullscreen style="display:none"></iframe>
+      <p>⬆️לחץ על הקישור כדי לצפות בנתונים! 🌟</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 ניתוח Tableau | עצב באהבה 🚀
+  </footer>
+
+  <script>
+    // הצגת טעינה עד שהדשבורד נטען
+    const iframe = document.getElementById("tableauFrame");
+    const loader = document.getElementById("loader");
+
+    iframe.onload = function() {
+      loader.style.display = "none";
+      iframe.style.display = "block";
+    };
+
+    console.log("Tableau site loaded with love ❤️");
+  </script>
+</body>
+</html>
